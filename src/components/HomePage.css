@@ -1,0 +1,28 @@
+.home-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .device-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .device-card {
+    width: 150px;
+    height: 150px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .device-card:hover {
+    background-color: #e0e0e0;
+  }
+  
