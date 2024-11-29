@@ -81,7 +81,7 @@ const DeviceDetailsPage = () => {
             </option>
           ))}
         </select>
-        <button onClick={handleFilter}>Filter</button>
+        <button onClick={handleFilter}>search</button>
       </div>
       <div className="chart">
         <Bar data={chartData} />
