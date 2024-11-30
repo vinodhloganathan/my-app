@@ -1,35 +1,79 @@
 .details-container {
-    display: flex;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chart {
+  flex: 1;
+}
+
+.grid {
+  flex: 1;
+  margin-top: 30px;
+  
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 244px;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Responsive layout for screens smaller than 768px */
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column; /* Stack items vertically */
     gap: 20px;
-    padding: 20px;
   }
-  
-  .filters {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .chart {
-    flex: 1;
-  }
-  
+
+  .filters,
+  .chart,
   .grid {
-    flex: 1;
-    margin-top: 30px;
-    
+    width: 100%; /* Full width for all elements */
   }
-  
-  
+
   table {
-    width: 100%;
-    border-collapse: collapse;
-    height: 244px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    display: block; /* Make table scrollable */
   }
-  
+
   td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+    width: 100%; /* Make sure each table cell takes up full width */
+    box-sizing: border-box; /* Ensure proper cell sizing */
+    padding: 8px; /* Adjust padding for better fit */
   }
-  
+}
+
+/* Further adjustments for very small screens (mobile portrait mode) */
+@media (max-width: 480px) {
+  .details-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .filters {
+    gap: 8px; /* Reduce the gap between filter items */
+  }
+
+  .chart,
+  .grid {
+    min-width: 100%; /* Make sure chart and grid take full width */
+  }
+
+  td {
+    padding: 6px; /* Smaller padding on very small screens */
+  }
+}
