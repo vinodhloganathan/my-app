@@ -2,8 +2,8 @@
   display: flex;
   gap: 20px;
   padding: 20px;
-  height: 90vh;
-  width: 90vw;
+  height: 91vh;
+  width: 96vw;
   background-color:antiquewhite;
 }
 
@@ -61,6 +61,8 @@ td {
 @media (max-width: 768px) {
   .details-container {
     flex-direction: column; /* Stack items vertically */
+    width:90vw;
+    height:95vh;
     gap: 20px;
   }
 

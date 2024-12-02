@@ -1,8 +1,8 @@
 .home-container {
     text-align: center;
     height: 95vh;
-    width: 95vw;
-    background-color: rosybrown;
+    width: 98.3vw;
+    background-color: rgb(204, 105, 105);
   }
 
   .h1{
@@ -35,4 +35,23 @@
   .device-card:hover {
     background-color: darkgray;
   }
+
+  
+/* Responsive layout for screens smaller than 768px */
+@media (max-width: 768px) {
+  .home-container{
+    height: 95vh;
+    width: 96vw;
+  }
+  
+}
+
+/* Further adjustments for very small screens (mobile portrait mode) */
+@media (max-width: 480px) {
+  .home-container{
+    height: 95vh;
+    width: 96vw;
+  }
+}
+
   
