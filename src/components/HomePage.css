@@ -2,13 +2,16 @@
     text-align: center;
     height: 95vh;
     width: 98.3vw;
-    background-color: rgb(204, 105, 105);
+    background-color:black;
+    overflow:hidden;
+  
   }
 
   .h1{
     padding: 20px;
-    background-color: black;
-    color: #f4f4f4;
+    background-color:rgb(226, 226, 24);
+    color: black;
+
 
   }
   
@@ -22,19 +25,67 @@
   .device-card {
     width: 150px;
     height: 150px;
-    background-color:ivory;
-    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #FFF;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
-    border: 1px solid white;
     cursor: pointer;
-    transition: 0.3s;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+  }
+
+  .device-card ::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+
+  }
+
+  .device-card::before{
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00C8,#FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 7px);
+    height: calc(100% + 7px);
+    filter:blur(8px);
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+    animation: glowing 20s linear infinite;
   }
   
-  .device-card:hover {
-    background-color: darkgray;
-  }
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+.device-card:hover::before{
+  opacity: 1;
+}
+
+
+.device-card:active{
+  color: #000;
+  font-weight: bold;
+
+}
 
   
 /* Responsive layout for screens smaller than 768px */
