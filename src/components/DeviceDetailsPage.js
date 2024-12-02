@@ -67,21 +67,21 @@ const DeviceDetailsPage = () => {
   return (
     <div className="details-container">
       <div className="filters">
-        <select value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)}>
+        <select className="fillte" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)}>
           {deviceData.map((day) => (
             <option key={day.date} value={day.date}>
               {day.date}
             </option>
           ))}
         </select>
-        <select value={selectedHour} onChange={(e) => setSelectedHour(e.target.value)}>
+        <select className="fillte" value={selectedHour} onChange={(e) => setSelectedHour(e.target.value)}>
           {[...Array(24).keys()].map((h) => (
             <option key={h} value={h + 1}>
               {h + 1}:00
             </option>
           ))}
         </select>
-        <button onClick={handleFilter}>search</button>
+        <button className="search" onClick={handleFilter}>search</button>
       </div>
       <div className="chart">
         <Bar data={chartData} />

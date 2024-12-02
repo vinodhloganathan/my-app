@@ -14,7 +14,7 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-      <h1>IoT Devices</h1>
+      <h1 className="h1">IoT Devices</h1>
       <div className="device-grid">
         {devices.map((device) => (
           <div

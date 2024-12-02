@@ -1,6 +1,15 @@
 .home-container {
     text-align: center;
-    margin: 20px;
+    height: 95vh;
+    width: 99vw;
+    background-color: rosybrown;
+  }
+
+  .h1{
+    padding: 20px;
+    background-color: black;
+    color: #f4f4f4;
+
   }
   
   .device-grid {
@@ -13,16 +22,17 @@
   .device-card {
     width: 150px;
     height: 150px;
-    background-color: #f4f4f4;
+    background-color:ivory;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
+    justify-content:space-evenly;
+    border: 1px solid white;
     cursor: pointer;
     transition: 0.3s;
   }
   
   .device-card:hover {
-    background-color: #e0e0e0;
+    background-color: darkgray;
   }
   
