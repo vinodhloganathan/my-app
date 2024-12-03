@@ -4,7 +4,8 @@
     width: 98.3vw;
     background-color:black;
     overflow:hidden;
-  
+    transform:scale(1);
+    
   }
 
   .h1{
@@ -23,6 +24,7 @@
   }
   
   .device-card {
+    
     width: 150px;
     height: 150px;
     border: none;
@@ -37,7 +39,7 @@
     border-radius: 12px;
   }
 
-  .device-card ::after{
+  .device-card::after{
     content: "";
     z-index: -1;
     position: absolute;
@@ -61,9 +63,9 @@
     left: -2px;
     background-size: 600%;
     z-index: -1;
-    width: calc(100% + 7px);
-    height: calc(100% + 7px);
-    filter:blur(8px);
+    width: calc(100% + 9px);
+    height: calc(100% + 9px);
+    filter:blur(9px);
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
     opacity: 0;
@@ -80,6 +82,13 @@
   opacity: 1;
 }
 
+.device-card:active:after{
+  content:"";
+  background:transparent;
+  position:absolute;
+  z-index:10;
+
+}
 
 .device-card:active{
   color: #000;
